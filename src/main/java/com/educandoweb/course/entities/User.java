@@ -3,11 +3,21 @@ package com.educandoweb.course.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "tb_user")									// substituicao do nome, pois "user" eh uma palavra reservada
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	
 	// atributos básicos
+	@Id														// indica que o atributo id será a chave primária dessa entidade
+	@GeneratedValue(strategy = GenerationType.IDENTITY)		// id com autoincremento (gerada automaticamente)
 	private Long id;
 	private String name;
 	private String email;
