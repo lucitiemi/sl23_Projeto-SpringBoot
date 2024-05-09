@@ -1,7 +1,6 @@
 package com.educandoweb.course.entities.pk;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 import com.educandoweb.course.entities.Order;
 import com.educandoweb.course.entities.Product;
